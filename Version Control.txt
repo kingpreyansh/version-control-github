@@ -1,0 +1,76 @@
+Git Workflow
+
+1. Fetch and merge changes from the remote
+2. Create a branch to work on a new project feature
+3. Develop the feature on your branch and commit your work
+4. Fetch and merge from the remote again (in case new commits were made while you were working)
+5. Push your branch up to the remote for review
+
+--------------------------------------------------------------------------------------------------
+
+git checkout HEAD filename
+
+will restore the file in your working directory to look exactly as it did when you last made a commit.
+
+--------------------------------------------------------------------------------------------------
+
+git diff filename
+
+will allow you to see the difference of the text from the last commit.
+
+--------------------------------------------------------------------------------------------------
+
+git add filename_1 filename_2
+
+adds 2 files to the staging area	
+
+--------------------------------------------------------------------------------------------------
+
+git reset HEAD filename
+
+This command resets the file in the staging area to be the same as the HEAD commit. It does not discard file changes from the working directory, it just removes them from the staging area.
+
+--------------------------------------------------------------------------------------------------
+
+git commit -m "here's a message"
+
+This command will add the changes to the main branch.
+
+--------------------------------------------------------------------------------------------------
+
+git checkout HEAD filename: Discards changes in the working directory.
+
+git reset HEAD filename: Unstages file changes in the staging area.
+
+git reset commit_SHA: Resets to a previous commit in your commit history.
+
+--------------------------------------------------------------------------------------------------
+
+git add .   : Adds all files to the working area
+
+--------------------------------------------------------------------------------------------------
+
+git branch: shows what branch you are currently on.
+
+git branch new_branch: to create a new branch
+
+git checkout branch_name: you can switch to the new branch with this command
+
+git merge branch_name: include all the changes made to the fencing branch on the master branch
+
+git branch -d branch_name: will delete the specified branch from your Git project. (Need capital D to delete a branch that was never merged)
+
+--------------------------------------------------------------------------------------------------
+
+git clone remote_location clone_name: remote_location tells Git where to go to find the remote. This could be a web address, or a filepath
+
+git remote -v: see a list of a Git project’s remotes with the command
+
+git fetch: An easy way to see if changes have been made to the remote and bring the changes down to your local copy
+
+git merge origin/master: use the git merge command to integrate origin/master into your local master branch.
+
+git push origin your_branch_name: will push your branch up to the remote
+
+--------------------------------------------------------------------------------------------------
+
